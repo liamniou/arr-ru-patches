@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/radarr-ru"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "deps(radarr-ru)"
+    labels:
+      - "dependencies"
+      - "docker"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
